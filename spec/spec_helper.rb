@@ -15,12 +15,17 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+ENV["RAILS_ENV"] ||= 'test'
+require 'spec_helper'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-
   require 'capybara'
   config.include Capybara::DSL
-
+  config.include Rails.application.routes.url_helpers
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
