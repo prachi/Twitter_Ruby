@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'rspec-rails'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'rspec-its', '~> 0.0.1.pre'
 
 
 # Use sqlite3 as the database for Active Record
